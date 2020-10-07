@@ -1,15 +1,13 @@
 import React from 'react';
-// import Playground from './components/Playground.js'
+import {} from 'react-router-dom'
+// import AppRouter from './routers/AppRouter'
+import Store from './components/playground/redux-expensify'
 
-
-class App extends React.Component {
-
+class App extends React.Component{
     render(){
         return (
-            <p> Expensify application came to life</p>
-        );
+            <Store/>
+        )
     }
-
 }
-
 export default App;

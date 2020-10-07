@@ -1,0 +1,22 @@
+@import "./variables";
+@import "./mixins";
+//$primary: #999;
+// /Sass
+//
+// /Components - A directory which has a .scss file for each React component
+// /Pages - A directory which has a .scss file for each page that requires custom styles
+// /Templates (optional) - A directory for templates if using them (for tools such as gatsby)
+// /_elements.scss - Any generic styles for the site. Shouldn't have any classes or ids for selectors.
+// /_keyframes.scss (optional) - Any keyframes or animations I will be using for the site.
+// /_mixins.scss - Any mixins (style snippets) that will be used over and over
+// /_variables.scss - Any variables that will be used throughout styles
+// /app.scss - The file that imports all other scss files
+.selected{
+    font-weight: bold;
+    text-decoration: underline;
+    background-color: aquamarine;
+}
+
+.container{
+    background-color: $primary;
+}
