@@ -1,9 +1,38 @@
-.selected {
-  font-weight: bold;
-  text-decoration: underline;
-  background-color: aquamarine; }
+.card-restyled {
+  width: 25rem;
+  margin-right: 14px;
+  box-shadow: 2px 3px 10px #31233b; }
 
-.container {
-  background-color: #888; }
+.close {
+  outline: none; }
+
+.close:hover {
+  color: white; }
+
+button:focus {
+  outline: none; }
+
+.expense-filter {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .expense-filter input[name="filter"] {
+    margin-top: 20px;
+    padding: 0.3rem 0.6rem;
+    width: 50%;
+    font-size: 1.5rem;
+    line-height: 2.1rem; }
+  .expense-filter .dropdown {
+    height: 2.1rem;
+    padding: 0.3rem 0.6rem;
+    line-height: 2.1rem; }
+
+.expenses-wrapper {
+  width: 90%;
+  margin: 10px auto; }
+
+.selected {
+  font-weight: bold; }
 
 /*# sourceMappingURL=App.css.map */

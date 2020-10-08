@@ -1,5 +1,9 @@
 @import "./variables";
 @import "./mixins";
+@import "./Components/expenseListItem";
+@import "Components/expenseListFilter";
+@import "Components/expensesList";
+@import "Components/dashboard";
 //$primary: #999;
 // /Sass
 //
@@ -13,10 +17,4 @@
 // /app.scss - The file that imports all other scss files
 .selected{
     font-weight: bold;
-    text-decoration: underline;
-    background-color: aquamarine;
-}
-
-.container{
-    background-color: $primary;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import {BrowserRouter as Router, NavLink, Route, Switch} from "react-router-dom";
-import Home from '../components/Home';
+import ExpenseDashboard from '../components/ExpenseDashboard';
 import About from '../components/About'
 import NoMatch from "../components/NoMatch";
 import Users from "../components/Users";
@@ -13,7 +13,7 @@ const AppRouter = ()=>(
                     <li className={'nav-item'}>
                         <NavLink to="/" exact className={'nav-link'}
                                  activeClassName="selected"
-                        >Home
+                        >Dashboard
                         </NavLink>
                     </li>
                     <li className={'nav-item'}>
@@ -34,7 +34,7 @@ const AppRouter = ()=>(
             </nav>
             <Switch>
                 <Route path="/" exact>
-                    <Home/>
+                    <ExpenseDashboard/>
                 </Route>
                 <Route path="/about" exact>
                     <About/>
