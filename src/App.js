@@ -2,8 +2,7 @@ import React from 'react';
 import {} from 'react-router-dom'
 import configureStore from "./store/configureStore";
 import AppRouter from './routers/AppRouter'
-import {addExpense, removeExpense} from './actions/expenses'
-import {setTextFilter} from "./actions/filters";
+import {addExpense} from './actions/expenses'
 import getVisibleExpenses from './selectors/expenses';
 import { Provider } from 'react-redux'
 // import {AuthInfo} from "./components/playground/high_order_component";
@@ -30,7 +29,7 @@ store.dispatch(addExpense({
     amount: 5000, // To be changed to 300
     createdAt: 1992
 }))
-const add_1 = store.dispatch(addExpense({
+store.dispatch(addExpense({
     description: 'Business',
     note: 'A note here 1',
     amount: 200, // To be changed to 300
