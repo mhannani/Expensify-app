@@ -1,14 +1,25 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {removeExpense} from '../actions/expenses'
-const ExpenseListItem = ({dispatch, id, note, description, amount, createdAt})=>(
-        <div className="card-restyled text-white bg-dark mb-3">
-            <button type="button" className="close mr-3 mt-2" onClick={()=>{
-                // DELETE AN EXPENSE
-                dispatch(removeExpense(id))
-            }}>
-                <span aria-hidden="true">&times;</span>
-            </button>
+import {editExpense, removeExpense} from '../actions/expenses'
+import {Link} from "react-router-dom";
+const ExpenseListItem = ({ dispatch, id, description, amount, createdAt })=>(
+        <div className={`card-restyled text-white mb-3 bg-info`}>
+            <ul className="list-inline float-right m-0">
+                <li className="list-inline-item">
+                    <Link to={`/editExpense/${id}`}>
+                        <button className="btn btn-success btn-sm rounded-5" type="button" data-toggle="tooltip"
+                                data-placement="top" title="Edit" onClick={() => {
+                            dispatch(editExpense({id}));
+                        }}><i className="fa fa-edit"></i></button>
+                    </Link>
+                </li>
+                <li className="list-inline-item">
+                    <button className="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip"
+                            data-placement="top" title="Delete" onClick={() => {
+                        dispatch(removeExpense({ id }));
+                    }}><i className="fa fa-trash"></i></button>
+                </li>
+            </ul>
             <div className="card-header text-center">
                 <div className="row">
                     <div className="col">amount: ${amount}</div>
@@ -17,9 +28,8 @@ const ExpenseListItem = ({dispatch, id, note, description, amount, createdAt})=>
 
             </div>
             <div className="card-body">
-                <h4 className="card-title">{note}</h4>
                 <p className="card-text">{description}</p>
             </div>
         </div>
 )
-export default connect()(ExpenseListItem)
+export default connect()(ExpenseListItem);

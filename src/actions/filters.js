@@ -8,7 +8,11 @@ export const setTextFilter = (text)=>({
 //! SORT_BY_AMOUNT
 
 export const sortByAmount = ()=>({
-    type: 'SORT_BY_AMOUNT'
+/**
+ * sort the expenses list by amount(ascending order)
+ */
+
+type: 'SORT_BY_AMOUNT'
 })
 
 //! SORT_BY_DATE

@@ -1,18 +1,30 @@
-.expense-filter{
+.center_IT{
+  .form-inline{
     margin-bottom: 40px;
+    margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
   input[name="filter"]{
-    margin-top: 20px;
     padding: 0.3rem 0.6rem;
     width: 50%;
     font-size: 1.5rem;
     line-height: 2.1rem;
+    border-radius: 4px;
   }
-  .dropdown{
-    height: 2.1rem;
-    padding: 0.3rem 0.6rem;
-    line-height: 2.1rem;
+  .custom-select{
+    margin-left: 4px;
+    padding:10px 10px;
+    height: 3rem;
+    width: 10em;
+  }
+  .custom-select:focus{
+    outline: none;
+  }
+  select{
+    option{
+      padding: 20px 20px;
+    }
   }
 }
