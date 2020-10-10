@@ -2,7 +2,6 @@ import React from 'react';
 import {} from 'react-router-dom'
 import configureStore from "./store/configureStore";
 import AppRouter from './routers/AppRouter'
-import Hoc from './components/playground/high_order_component';
 import {addExpense, removeExpense} from './actions/expenses'
 import {setTextFilter} from "./actions/filters";
 import getVisibleExpenses from './selectors/expenses';
