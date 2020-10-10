@@ -6,7 +6,6 @@ const NoMatch = ()=>{
     return (
         <div className={'text-center'}>
             <h1>Sorry but we've trouble finding : {currentLocation.pathname}</h1>
-
             <NavLink to='/'>Go Home</NavLink>
         </div>
     )

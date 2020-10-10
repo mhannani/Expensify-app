@@ -1,9 +1,9 @@
 import React from 'react';
 import moment from 'moment';
-import 'react-dates/initialize';
-import 'react-dates/lib/css/_datepicker.css';
-import { SingleDatePicker } from 'react-dates';
-export default class ExpenseForm extends React.Component {
+import {SingleDatePicker} from 'react-dates';
+import {connect} from "react-redux";
+
+class ExpenseForm extends React.Component {
     constructor(props) {
         super(props);
         console.log(props.expense);
@@ -12,7 +12,7 @@ export default class ExpenseForm extends React.Component {
             amount: props.expense ? ((props.expense.amount) / 100).toString() :'',
             note: props.expense ? props.expense.note :'',
             createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
-            focused : false,
+            focused : null,
             error: false
         };
     }
@@ -119,3 +119,10 @@ export default class ExpenseForm extends React.Component {
         )
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        filters: state.filters
+    };
+};
+export default connect(mapStateToProps)(ExpenseForm)
+

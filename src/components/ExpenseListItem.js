@@ -1,7 +1,8 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {editExpense, removeExpense} from '../actions/expenses'
+import {editExpense, removeExpense} from '../actions/expenses';
 import {Link} from "react-router-dom";
+import moment from "moment";
 const ExpenseListItem = ({ dispatch, id, description, amount, createdAt })=>(
         <div className={`card-restyled text-white mb-3 bg-info`}>
             <ul className="list-inline float-right m-0">
@@ -23,7 +24,7 @@ const ExpenseListItem = ({ dispatch, id, description, amount, createdAt })=>(
             <div className="card-header text-center">
                 <div className="row">
                     <div className="col">amount: ${amount}</div>
-                    <div className="col">created at: {createdAt}</div>
+                    <div className="col">created at: {moment(createdAt).format('L')}</div>
                 </div>
 
             </div>

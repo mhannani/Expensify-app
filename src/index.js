@@ -7,6 +7,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './Sass/App.scss';
 import * as serviceWorker from './serviceWorker';
+import 'font-awesome/css/font-awesome.min.css';
+import 'react-dates/initialize';
+import 'react-dates/lib/css/_datepicker.css';
 
 ReactDOM.render(
   <React.StrictMode>
