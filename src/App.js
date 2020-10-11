@@ -3,7 +3,9 @@ import configureStore from "./store/configureStore";
 import AppRouter from './routers/AppRouter'
 import { Provider } from 'react-redux'
 const store = configureStore();
+console.log('tested')
 class App extends React.Component{
+
     render(){
         return (
             <Provider store={store}>
