@@ -5,7 +5,7 @@ import About from '../components/About'
 import NoMatch from "../components/NoMatch";
 import AddExpense from "../components/AddExpense";
 import EditExpense from "../components/EditExpense";
-
+import Jitsi from "../components/jitsi";
 const AppRouter = ()=>(
     <Router>
         <div>
@@ -38,6 +38,15 @@ const AppRouter = ()=>(
                         >About
                         </NavLink>
                     </li>
+                    <li className={'nav-item'}>
+                        <NavLink to={'/meeting'}
+                                 className={'nav-link'}
+                                 activeClassName={'selected'}
+                        >Meeting
+
+
+                        </NavLink>
+                    </li>
                 </ul>
             </nav>
             <Switch>
@@ -45,6 +54,7 @@ const AppRouter = ()=>(
                 <Route path="/about" component={About} exact={true} />
                 <Route path="/addExpense" component={AddExpense} />
                 <Route path="/editExpense/:id" component={EditExpense} />
+                <Route path="/meeting" component={Jitsi}/>
                 <Route component={NoMatch} />
             </Switch>
         </div>

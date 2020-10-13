@@ -48,10 +48,9 @@ class ExpenseListFilters extends React.Component{
                     startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
                     onFocusChange={this.onFocusChange}
                     showClearDates={true}
-                    // numberOfMonths={1}
+                    numberOfMonths={1}
                     isOutsideRange={() => false}
-                    regular = {()=> true}
-                    reopenPickerOnClearDates= {()=>true}
+                    reopenPickerOnClearDates
 
 
                 />
@@ -69,3 +68,5 @@ const mapStateToProps = (state) => {
     };
 };
 export default connect(mapStateToProps)(ExpenseListFilters)
+
+

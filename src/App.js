@@ -2,8 +2,9 @@ import React from 'react';
 import configureStore from "./store/configureStore";
 import AppRouter from './routers/AppRouter'
 import { Provider } from 'react-redux'
+import './firebase/firebase'
+// import './components/playground/promises'
 const store = configureStore();
-console.log('tested')
 class App extends React.Component{
 
     render(){
@@ -11,6 +12,7 @@ class App extends React.Component{
             <Provider store={store}>
                 <AppRouter/>
             </Provider>
+
         )
     }
 }
