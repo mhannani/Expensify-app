@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {editExpense, removeExpense} from '../actions/expenses';
+import {editExpense, startRemoveExpense} from '../actions/expenses';
 import {Link} from "react-router-dom";
 import moment from "moment";
 const ExpenseListItem = ({ dispatch, id, description, amount, createdAt })=>(
@@ -17,7 +17,7 @@ const ExpenseListItem = ({ dispatch, id, description, amount, createdAt })=>(
                 <li className="list-inline-item">
                     <button className="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip"
                             data-placement="top" title="Delete" onClick={() => {
-                        dispatch(removeExpense({ id }));
+                        dispatch(startRemoveExpense({ id }));
                     }}><i className="fa fa-trash"></i></button>
                 </li>
             </ul>
