@@ -1,17 +1,23 @@
 import React from 'react';
-import configureStore from "./store/configureStore";
+// import configureStore from "./store/configureStore";
 import AppRouter from './routers/AppRouter'
-import { Provider } from 'react-redux'
+// import { Provider } from 'react-redux'
 import './firebase/firebase'
 // import './components/playground/promises'
-const store = configureStore();
+// const store = configureStore();
 class App extends React.Component{
+    // constructor(props) {
+    //     super(props);
+    //     const state = {
+    //         loading:true
+    //     }
+    // }
 
     render(){
         return (
-            <Provider store={store}>
+            // <Provider store={store}>
                 <AppRouter/>
-            </Provider>
+            // </Provider>
 
         )
     }

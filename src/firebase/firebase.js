@@ -1,7 +1,7 @@
 // const firebase = require('firebase');
-import firebase from 'firebase/app'
+import firebase from 'firebase'
 import 'firebase/database'
-import  moment from 'moment';
+// import  moment from 'moment';
 //! The configuration setup
 //! =======================
 
@@ -19,15 +19,4 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 const database = firebase.database()
 
-
-
-const expenses = [{
-    description: 'some dummy description',
-    note: 'some dummy note',
-    amount: 23500,
-    createdAt: moment().format('LLL')
-}]
-
-
-
-database.ref('expenses/').push(expenses)
+export {database as default, firebase}
