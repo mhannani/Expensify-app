@@ -6,7 +6,6 @@ import {connect} from "react-redux";
 class ExpenseForm extends React.Component {
     constructor(props) {
         super(props);
-        console.log(props.expense);
         this.state = {
             description: props.expense ? props.expense.description :'',
             amount: props.expense ? ((props.expense.amount) / 100).toString() :'',

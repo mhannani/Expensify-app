@@ -17,7 +17,6 @@ class ExpenseListFilters extends React.Component{
         this.props.dispatch(setEndDate(endDate));
     };
     onFocusChange = (focused) => {
-        console.log('focused')
         this.setState(() => ({ focused }));
     }
     render(){
@@ -60,7 +59,6 @@ class ExpenseListFilters extends React.Component{
         )
     }
 }
-
 
 const mapStateToProps = (state) => {
     return {
