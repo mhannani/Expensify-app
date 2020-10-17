@@ -1,26 +1,22 @@
 import React from 'react';
-// import configureStore from "./store/configureStore";
 import AppRouter from './routers/AppRouter'
-// import { Provider } from 'react-redux'
-import './firebase/firebase'
-// import './components/playground/promises'
-// const store = configureStore();
-class App extends React.Component{
-    // constructor(props) {
-    //     super(props);
-    //     const state = {
-    //         loading:true
-    //     }
-    // }
+import {firebase} from './firebase/firebase'
 
+class App extends React.Component{
     render(){
         return (
-            // <Provider store={store}>
-                <AppRouter/>
-            // </Provider>
+            <AppRouter/>
 
         )
     }
 }
+
+firebase.auth().onAuthStateChanged((user)=>{
+    if(user){
+        console.log('logged in');
+    }else{
+        console.log('logged out');
+    }
+})
 
 export default App;

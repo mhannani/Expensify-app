@@ -6,6 +6,7 @@ import NoMatch from "../components/NoMatch";
 import AddExpense from "../components/AddExpense";
 import EditExpense from "../components/EditExpense";
 import Jitsi from "../components/jitsi";
+import LogInSignIn from "../components/LoginSignin";
 const AppRouter = ()=>(
     <Router>
         <div>
@@ -50,7 +51,8 @@ const AppRouter = ()=>(
                 </ul>
             </nav>
             <Switch>
-                <Route path="/" component={ExpenseDashboard} exact={true} />
+                <Route path="/" component={LogInSignIn} exact={true} />
+                <Route path="/dashboard" component={ExpenseDashboard} exact={true} />
                 <Route path="/about" component={About} exact={true} />
                 <Route path="/addExpense" component={AddExpense} />
                 <Route path="/editExpense/:id" component={EditExpense} />

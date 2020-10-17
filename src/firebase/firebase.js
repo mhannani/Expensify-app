@@ -1,6 +1,7 @@
 // const firebase = require('firebase');
 import firebase from 'firebase/app'
 import 'firebase/database'
+import 'firebase/auth'
 // import  moment from 'moment';
 //! The configuration setup
 //! =======================
@@ -18,5 +19,22 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig)
 const database = firebase.database()
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider()
 
-export {database as default, firebase}
+
+export {database as default, firebase, googleAuthProvider}
+//
+// For the module builds, these are available in the following manner
+// (replace <PACKAGE> with the name of a component - i.e. auth, database, etc):
+//
+// CommonJS Modules:
+//     const firebase = require('firebase/app');
+// require('firebase/<PACKAGE>');
+//
+// ES Modules:
+//     import firebase from 'firebase/app';
+// import 'firebase/<PACKAGE>';
+//
+// Typescript:
+//     import * as firebase from 'firebase/app';
+// import 'firebase/<PACKAGE>';
